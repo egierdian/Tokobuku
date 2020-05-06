@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="90d7a01f-7d4a-40b4-9954-2a9852514a9a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from buku]]>
+	</queryString>
+	<field name="kd_buku" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="judul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="penerbit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pengarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun_terbit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="154" splitType="Stretch">
+			<line>
+				<reportElement uuid="429f1173-197a-4743-809e-573651168d96" x="2" y="140" width="550" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="dbceab63-4127-442c-bcdc-2ab0956b4795" style="Title" x="2" y="18" width="299" height="43"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Lucida Bright" size="36"/>
+				</textElement>
+				<text><![CDATA[TK. Sinar Abadi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="283ab2c4-911b-4ea2-b1af-c8a81e53f305" style="SubTitle" x="7" y="63" width="274" height="26"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Menjual berbagai macam Buku]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5d8c220-666a-4959-adb2-30a1a015aab7" x="7" y="89" width="263" height="51"/>
+				<textElement/>
+				<text><![CDATA[E-mail : Sinarabadiaja@gmail.com HP: 082127703277
+Jl. Rancabentang - Kebonkopi
+Cimahi Selatan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="357b6026-1b0b-498d-b519-8454a5fa476f" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="7e2510e9-c0b4-4fe5-b4b7-49f7f48402bb" style="Column header" x="0" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[Kode Buku]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f955404a-b2c1-4ea8-ba23-7746c601cd6a" style="Column header" x="92" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[Judul]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1fbd051b-a215-4f52-bad1-37b5197efb5b" style="Column header" x="184" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[Penerbit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cec39de7-59a4-42db-9c85-ba545c87c194" style="Column header" x="276" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[Pengarang	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d0e374c-a501-4d24-8b34-9585bbe434b6" style="Column header" x="368" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tahun Terbit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e200714-081a-4d87-83ad-bab7ec4506b2" style="Column header" x="460" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[harga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="35091add-680d-4821-991e-88e9a687e18d" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="67194f42-4463-4e33-85d4-07449590ff39" style="Detail" x="0" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kd_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b59f64d-4627-4c59-9217-c7e72f24b589" style="Detail" x="92" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1e153a7f-f2ec-4b57-8632-43e63ae69a63" style="Detail" x="184" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{penerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="621b0c5a-757f-4829-beaa-6a841abe4724" style="Detail" x="276" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="51f66918-b1ca-45c5-8b46-558a3efd529e" style="Detail" x="368" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tahun_terbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="19c310f7-ab84-48b8-831a-65106449c2d9" style="Detail" x="460" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="af5bee5d-b484-4424-8a2b-d7898fc40377" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d6245d0a-10cc-4b39-a3bf-84ae1052228f" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="a6f5f3ea-6fcf-46f1-9117-70c20e5f36c5" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="f98f765e-599a-49b5-b536-01203a193fb1" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
